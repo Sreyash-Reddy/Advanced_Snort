@@ -6,8 +6,7 @@ from sklearn.model_selection import train_test_split
 from scapy.all import *
 
 training_dataset_with_all_columns = pd.read_csv("Dataset.csv")
-training_dataset = training_dataset_with_all_columns[
-    ['protocol_type', 'service', 'flag', 'src_bytes', 'dst_bytes', 'class']]
+training_dataset = training_dataset_with_all_columns[['protocol_type', 'service', 'flag', 'src_bytes', 'dst_bytes', 'class']]
 training_dataset = training_dataset.drop_duplicates()
 
 
